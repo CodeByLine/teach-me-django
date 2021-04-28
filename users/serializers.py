@@ -50,7 +50,7 @@ class TokenSerializer(serializers.ModelSerializer):
 
     def get_user_type(self, obj):
         serializer_data = UserSerializer(
-            obj.user
+            obj.user  #return user instance
         ).data
         is_student = serializer_data.get('is_student')
         is_teacher = serializer_data.get('is_teacher')
