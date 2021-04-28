@@ -15,5 +15,11 @@ DATABASES = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
+    u'https://localhost:8888',
+    u'https://127.0.0.1:8000',
+    u'http://127.0.0.1:8080',
+    u'http://localhost:8000',
+    u'http://localhost',
+    u'http://127.0.0.1:3000',
+    u'http://192.168.7.23:3000',
 )

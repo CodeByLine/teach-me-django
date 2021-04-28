@@ -4,7 +4,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
+
+# CORS Config
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,7 +29,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     'api',
-    'users'
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +87,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User' # infor django that users model is inside User
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'users.serializers.UserSerializer',
@@ -93,3 +97,7 @@ REST_AUTH_SERIALIZERS = {
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'users.serializers.CustomRegisterSerializer',
 }
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+

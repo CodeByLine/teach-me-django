@@ -23,7 +23,7 @@ class AssignmentDetail extends React.Component {
     }
   }
 
-  componentWillReceiveProps(newProps) {
+  getDerivedStateFromProps(newProps) {
     if (newProps.token !== this.props.token) {
       if (newProps.token !== undefined && newProps.token !== null) {
         this.props.getASNTSDetail(newProps.token, this.props.match.params.id);

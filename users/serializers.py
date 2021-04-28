@@ -38,7 +38,7 @@ class CustomRegisterSerializer(RegisterSerializer):
         user.is_teacher = self.cleaned_data.get('is_teacher')
         user.save()
         adapter.save_user(request, user, self)
-        return user
+        return user #return user instance
 
 
 class TokenSerializer(serializers.ModelSerializer):

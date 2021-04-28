@@ -12,7 +12,7 @@ class AssignmentList extends React.PureComponent {
     }
   }
 
-  componentWillReceiveProps(newProps) {
+  getDerivedStateFromProps(newProps) {
     if (newProps.token !== this.props.token) {
       if (newProps.token !== undefined && newProps.token !== null) {
         this.props.getASNTS(newProps.token);
