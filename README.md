@@ -15,7 +15,7 @@
   <a href="https://youtu.be/X367yDYmogo"><img src="https://github.com/justdjango/teach-me-django/blob/master/thumbnail.png" width="290"></a>
 </p>
 
-<em>This repo was from the following tutorial.</em>
+<em>This repo was done following this excellent tutorial:</em>
 
 This project contains a Django Rest API with a React frontend. Users are able to signup and login to their account. Teeachers are able to create quizes. Students are able to answer those quizes and view their results.
 
